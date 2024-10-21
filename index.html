@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xddd</title>
+    <title>Joxalag Fireworks</title>
     <style>
         body, html {
             margin: 0;
@@ -21,8 +21,10 @@
         h1 {
             position: absolute;
             color: white;
-            font-size: 4em;
+            font-size: 10vw; /* Responsive font size */
             animation: glow 1s infinite alternate;
+            text-align: center;
+            width: 100%;
         }
 
         @keyframes glow {
@@ -55,10 +57,35 @@
                 transform: translateY(-400px) scale(2);
             }
         }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 15vw; /* Larger font size for small screens */
+            }
+
+            @keyframes explode {
+                0% {
+                    transform: translateY(0) scale(0.5);
+                }
+                50% {
+                    transform: translateY(-200px) scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(-250px) scale(1.5);
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20vw; /* Even larger font size for extra small screens */
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Entra a fortnite Joxalag </h1>
+    <h1>Joxalag</h1>
 
     <script>
         function createFirework() {
